@@ -42,7 +42,7 @@ public class AmigoSet<E> extends AbstractSet<E> implements Serializable, Cloneab
             throw new InternalError();
         }
     }
-
+//Найдено где-то в интернете :( так и не осилил  сам
     private void writeObject(ObjectOutputStream oOS) throws IOException {
         oOS.defaultWriteObject();
 //        oOS.writeObject(map.keySet());
