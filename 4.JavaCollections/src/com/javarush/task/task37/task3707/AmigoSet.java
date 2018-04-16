@@ -6,14 +6,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.*;
 
-/*
-1. В классе AmigoSet должен содержаться private метод writeObject с одним параметром типа ObjectOutputStream.
-2. В классе AmigoSet должен содержаться private метод readObject с одним параметром типа ObjectInputStream.
-3. В методе writeObject должен быть вызван метод defaultWriteObject на объекте типа ObjectOutputStream полученном в качестве параметра.
-4. В методе readObject должен быть вызван метод defaultReadObject на объекте типа ObjectInputStream полученном в качестве параметра.
-5. Объект сериализованный с помощью метода writeObject должен быть равен объекту десериализованному с помощью метода readObject.
- */
-
 public class AmigoSet<E> extends AbstractSet<E> implements Serializable, Cloneable, Set<E> {
     private static final Object PRESENT = new Object();
     private transient HashMap<E, Object> map;
